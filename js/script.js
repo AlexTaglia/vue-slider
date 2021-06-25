@@ -21,6 +21,11 @@ const app = new Vue(
             ],
             imgIndex: 0,
         },
+        created() {
+            setInterval(() => {
+                this.next();
+            }, 3000);
+        },
         methods: {
             next: function () {
                 if (this.imgIndex === (this.contentImg.length - 1)) {
@@ -36,14 +41,14 @@ const app = new Vue(
                     this.imgIndex--
                 };
             },
-            currentDot: function(index){
-                if(this.imgIndex === index){
+            currentDot: function (index) {
+                if (this.imgIndex === index) {
                     return 'current-dot'
                 } else {
                     return '';
                 }
             },
-            goTo: function(index){
+            goTo: function (index) {
                 this.imgIndex = index;
             }
         }
