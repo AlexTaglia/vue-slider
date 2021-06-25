@@ -23,8 +23,15 @@
                 </div>
                 <div class="col-10 image-container">
                     <img :src="contentImg[imgIndex]" alt="Landscape">
-                    <div class="dots">
-                        <i v-for="img in contentImg" class="fas fa-circle"></i>
+                    <div class="row justify-content-center">
+                        <div class="col-3 dots-container">
+                            <div class="dots">
+                                <i v-for="(img, index) in contentImg" 
+                                :class="currentDot(index)" 
+                                class="fas fa-circle">
+                                </i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-1 arrow" @click="next()">

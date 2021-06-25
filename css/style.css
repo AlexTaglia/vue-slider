@@ -11,3 +11,26 @@ img {
 .image-container{
     text-align: center;
 }
+
+.dots-container{
+    position: relative;
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.454);
+    border-radius: 25px;
+}
+
+.dots{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.current-dot{
+    color: rgba(255, 255, 255, 0.831);
+}
+
+i{
+    margin: 10px 5px;
+}
+
+.arrow:hover{
+    cursor:pointer
+}

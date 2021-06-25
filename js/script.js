@@ -35,6 +35,13 @@ const app = new Vue(
                 } else {
                     this.imgIndex--
                 };
+            },
+            currentDot: function(index){
+                if(this.imgIndex === index){
+                    return 'current-dot'
+                } else {
+                    return '';
+                }
             }
         }
     }
