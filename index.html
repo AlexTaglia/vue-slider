@@ -18,13 +18,16 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <div class="col-1" @click="previous()">
+                <div class="col-1 arrow" @click="previous()">
                     <i class="fas fa-chevron-left"></i>
                 </div>
-                <div class="col-10">
+                <div class="col-10 image-container">
                     <img :src="contentImg[imgIndex]" alt="Landscape">
+                    <div class="dots">
+                        <i v-for="img in contentImg" class="fas fa-circle"></i>
+                    </div>
                 </div>
-                <div class="col-1" @click="next()">
+                <div class="col-1 arrow" @click="next()">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
