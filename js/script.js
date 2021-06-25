@@ -9,8 +9,8 @@ Vue.config.devtools = true;
 
 const app = new Vue(
     {
-        el:'#app',
-        data:{
+        el: '#app',
+        data: {
             contentImg: [
                 './img/img1.jpg',
                 './img/img2.jpg',
@@ -19,7 +19,23 @@ const app = new Vue(
                 './img/img5.jpg',
                 './img/img6.jpg',
             ],
+            imgIndex: 0,
         },
-
+        methods: {
+            next: function () {
+                if (this.imgIndex === (this.contentImg.length - 1)) {
+                    this.imgIndex = 0;
+                } else {
+                    this.imgIndex++
+                }
+            },
+            previous: function () {
+                if (this.imgIndex === 0) {
+                    this.imgIndex = this.contentImg.length - 1
+                } else {
+                    this.imgIndex--
+                };
+            }
+        }
     }
 )
