@@ -17,7 +17,7 @@
 
     <div id="app">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-1 arrow" @click="previous()">
                     <i class="fas fa-chevron-left"></i>
                 </div>
@@ -28,7 +28,8 @@
                             <div class="dots">
                                 <i v-for="(img, index) in contentImg" 
                                 :class="currentDot(index)" 
-                                class="fas fa-circle">
+                                class="fas fa-circle"
+                                @click="goTo(index)">
                                 </i>
                             </div>
                         </div>

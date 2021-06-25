@@ -42,6 +42,9 @@ const app = new Vue(
                 } else {
                     return '';
                 }
+            },
+            goTo: function(index){
+                this.imgIndex = index;
             }
         }
     }
