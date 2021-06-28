@@ -23,7 +23,6 @@ new Vue(
             next: function () {
                 if (this.imgIndex === (this.contentImg.length - 1)) {
                     this.imgIndex = 0;
-                    this.fadeClass = 'fade'
                 } else {
                     this.imgIndex++
                 }
