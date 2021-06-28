@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vue Slider</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <img src="./img/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Carousel -->
+        <div id="app">
+            <div class="row align-items-center">
+                <div class="col-12 image-container">
+
+                    <div class="arrow-left" @click="previous()">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+
+                    <img class="img-custom h400px" :src="contentImg[imgIndex]" alt="Landscape">
+                    
+                    <div class="row justify-content-center">
+                        <div class="dots">
+                            <i v-for="(img, index) in contentImg" :class="currentDot(index)" class="fas fa-circle"
+                                @click="goTo(index)">
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="arrow-right" @click="next()">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section -->
+        <div class="row mt-4">
+            <div class="col-12 col-md-3 mb-4">
+                <div>
+                    <img class="img-custom h250px" src="./img/samuel-regan-asante-XzMttvKxz_M-unsplash.jpg" alt="">
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, sunt.
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-4">
+                <div>
+                    <img class="img-custom h250px" src="./img/samuel-regan-asante-jd4lOycLtpA-unsplash.jpg" alt="">
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus nam modi saepe error,
+                    possimus
+                    aliquam inventore fuga facere dolorum ad sequi voluptatum iure nobis consequatur laboriosam, facilis
+                    rerum,
+                    est mollitia. Ipsam quia adipisci non expedita perspiciatis dolorem? Culpa, rerum.
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mb-4">
+                <div>
+                    <img class="img-custom h250px" src="./img/samuel-regan-asante-jR2Jzo6UxDw-unsplash.jpg" alt="">
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptates molestiae sit
+                    voluptate quaerat praesentium!
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            Designed with <span class="heart">&#10084;</span>
+        </footer>
+
+    </div>
+
+
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
